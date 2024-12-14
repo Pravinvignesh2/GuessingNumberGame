@@ -21,7 +21,7 @@ public class GuessingNumberGame {
             int moves = playGame(secretNumber);
             long endTime = System.currentTimeMillis();
 
-            long timeTaken = (endTime - startTime) / 1000; // Time in seconds
+            long timeTaken = (endTime - startTime) / 1000;
 
             saveResult(playerName, moves, timeTaken);
             displayBestPlayer();
@@ -61,7 +61,6 @@ public class GuessingNumberGame {
         for (int digit : digits) {
             secretNumber.append(digit);
         }
-        System.out.println("Debug: Secret Number is " + secretNumber); // Remove this in production.
 
         return secretNumber.toString();
     }
